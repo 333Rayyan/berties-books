@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Set the title of the page with the shop name -->
+  <title>Bargain Books <%=shopName%>
+  </title>
+
+  <!-- Link to the main stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+
+<body>
+  <!-- Display the page heading with the shop name -->
+  <h1>Bargain: <%=shopName%>
+  </h1>
+
+  <!-- Display a paragraph introducing the list of books -->
+  <p>Here is a list of our books that are less than £20!</p>
+
+  <!-- Start of the unordered list to display books -->
+  <ul>
+    <!-- Loop through the available books -->
+    <% for (var i=0; i < availableBooks.length; i++) { %>
+
+      <!-- Check if the price of the current book is less than £20 -->
+      <% if (availableBooks[i].price < 20) { %>
+
+        <!-- Display the book information in a list item -->
+        <li>
+          <%= availableBooks[i].name %>, £<%= availableBooks[i].price %>
+        </li>
+
+        <% } %>
+          <% } %>
+  </ul>
+
+
+</body>
+
+</html>

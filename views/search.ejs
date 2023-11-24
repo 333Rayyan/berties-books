@@ -1,15 +1,31 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Search <%=shopName%></title>
-    <link rel="stylesheet"  type="text/css" href="/main.css" />
-  </head>
-  <body>
-    <h1>Search <%=shopName%></h1>
-    <form action="/search-result" method="GET">
-      <p>What book do you want?</p>
-      <input id="search-box" type="text" name="keyword" value="Default">
-      <input type="submit" value="Search" >
-    </form>
-  </body>
+
+<head>
+  <!-- Set the title of the page dynamically based on the 'shopName' variable -->
+  <title>Search <%=shopName%>
+  </title>
+
+  <!-- Link to an external stylesheet to style the page -->
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+
+<body>
+  <!-- Display a heading for the search page with the shop's name -->
+  <h1>Search <%=shopName%>
+  </h1>
+
+  <!-- Create a form for searching books. The form sends a GET request to "/search-result" on submission -->
+  <form action="/search-result" method="GET">
+    <!-- Prompt the user for the book they want -->
+    <p>What book do you want?</p>
+
+    <!-- Input field for the search keyword -->
+    <input id="search-box" type="text" name="keyword" value="Default">
+
+    <!-- Submit button to initiate the search -->
+    <input type="submit" value="Search">
+  </form>
+</body>
+
 </html>

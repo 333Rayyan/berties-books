@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Set the title of the page dynamically based on the 'shopName' variable -->
+  <title>List <%= shopName %>
+  </title>
+
+  <!-- Link to an external stylesheet to style the page -->
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+
+<body>
+  <!-- Display a heading with the shop's name and indication that it's a list page -->
+  <h1>List <%= shopName %>
+  </h1>
+
+  <!-- Provide a message about the purpose of the list -->
+  <p>Here is a list of our books!</p>
+
+  <!-- Use an unordered list to display the available books -->
+  <ul>
+    <!-- Iterate over each book in the 'availableBooks' array and display its name and price -->
+    <% for (var i=0; i < availableBooks.length; i++) { %>
+      <li>
+        <%= availableBooks[i].name %>, £<%= availableBooks[i].price %>
+      </li>
+      <% } %>
+  </ul>
+</body>
+
+</html>

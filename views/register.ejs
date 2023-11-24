@@ -1,16 +1,34 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Register for <%=shopName%></title>
-    <link rel="stylesheet"  type="text/css" href="/main.css" />
-  </head>
-  <body>
-    <h1>Register for <%=shopName%></h1>
-    <form method="POST" action="/registered">
-        <p>First name: <input id="first" type="text" name="first" value="first name" /></p>
-        <p>Last name: <input id="last" type="text" name="last" value="last name" /></p>
-        <p>Email: <input id="email" type="email" name="email" value="email" /></p>
-        <input type="submit" value="Register" />
-      </form>
-  </body>
+
+<head>
+  <!-- Set the title of the page dynamically based on the 'shopName' variable -->
+  <title>Register for <%=shopName%>
+  </title>
+
+  <!-- Link to an external stylesheet to style the page -->
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+
+<body>
+  <!-- Display a heading for the registration page with the shop's name -->
+  <h1>Register for <%=shopName%>
+  </h1>
+
+  <!-- Create a form for user registration. The form sends a POST request to "/registered" on submission -->
+  <form method="POST" action="/registered">
+    <!-- Input field for the user's first name -->
+    <p>First name: <input id="first" type="text" name="first" value="first name" /></p>
+
+    <!-- Input field for the user's last name -->
+    <p>Last name: <input id="last" type="text" name="last" value="last name" /></p>
+
+    <!-- Input field for the user's email address -->
+    <p>Email: <input id="email" type="email" name="email" value="email" /></p>
+
+    <!-- Submit button to register the user -->
+    <input type="submit" value="Register" />
+  </form>
+</body>
+
 </html>
